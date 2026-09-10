@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0b">
+  <meta name="description" content="张军毅的个人摄影与文字作品集：记录自然、城市、人物和那些没有交给相机的瞬间。">
+  <title>张军毅 / Zhang Junyi — Visual Diary</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><i></i></div>
+  <div class="cursor" id="cursor" aria-hidden="true"><span>VIEW</span></div>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-top">
+      <span>ZHANG JUNYI / VISUAL DIARY</span>
+      <span>SHANGHAI · 31.2304° N</span>
+    </div>
+    <div class="loader-center">
+      <span class="loader-mark">ZJ</span>
+      <span class="loader-copy">把生活，留在光里。</span>
+    </div>
+    <div class="loader-bottom">
+      <span class="loader-count" id="loader-count">00</span>
+      <div class="loader-line"><i></i></div>
+      <span>LOADING EXPERIENCE</span>
+    </div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="张军毅个人作品集首页">
+        <span class="brand-mark">ZJ</span>
+        <span class="brand-name">张军毅<small>Visual Artist &amp; Photographer</small></span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="主导航">
+        <a href="#home" class="nav-link is-active"><span>00</span>Index</a>
+        <a href="#manifesto" class="nav-link"><span>01</span>About</a>
+        <a href="#works" class="nav-link"><span>02</span>Works</a>
+        <a href="#journal" class="nav-link"><span>03</span>Notes</a>
+        <a href="#contact" class="nav-link"><span>04</span>Contact</a>
+      </nav>
+
+      <div class="header-tools">
+        <span class="local-time" id="local-time">SH 00:00:00</span>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换明暗主题">
+          <span class="theme-label">PAPER</span>
+          <i aria-hidden="true"></i>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="primary-nav">
+          <i></i><i></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-photo" aria-hidden="true">
+        <img src="assets/photos/photo-08.jpg" alt="" width="1800" height="1200">
+      </div>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="hero-kicker hero-reveal">
+        <span>Independent photographer</span>
+        <span>Selected works 2023—2026</span>
+      </div>
+
+      <h1 class="hero-title" id="hero-title">
+        <span class="title-line"><span class="title-inner">张军毅</span><small>ZHANG JUNYI</small></span>
+        <span class="title-line title-line-alt"><span class="title-inner">留光者</span><em>in light</em></span>
+      </h1>
+
+      <div class="hero-footer hero-reveal">
+        <p>用摄影保存那些正在消失的瞬间，也用文字记录快门之外的生活。</p>
+        <div class="hero-coordinates">
+          <span>31.2304° N</span>
+          <span>121.4737° E</span>
+        </div>
+      </div>
+
+      <a class="hero-scroll" href="#manifesto" aria-label="向下浏览">
+        <span>Scroll to explore</span>
+        <i></i>
+      </a>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>NATURAL LIGHT</span><i>✳</i><span>QUIET MOMENTS</span><i>✳</i><span>FILM &amp; DIGITAL</span><i>✳</i><span>SHANGHAI · CHINA</span><i>✳</i>
+        <span>NATURAL LIGHT</span><i>✳</i><span>QUIET MOMENTS</span><i>✳</i><span>FILM &amp; DIGITAL</span><i>✳</i><span>SHANGHAI · CHINA</span><i>✳</i>
+      </div>
+    </div>
+
+    <section class="manifesto" id="manifesto" aria-labelledby="manifesto-title">
+      <div class="section-frame">
+        <div class="section-index reveal"><span>01</span><span>ABOUT / MANIFESTO</span></div>
+
+        <div class="manifesto-layout">
+          <div class="manifesto-aside reveal">
+            <figure class="portrait-card" data-tilt>
+              <img src="assets/photos/photo-04.jpg" alt="张军毅的人物摄影占位作品" width="1400" height="1800" loading="lazy">
+              <figcaption><span>Portrait study</span><span>Hangzhou, 2026</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="manifesto-content">
+            <h2 id="manifesto-title" class="reveal">我拍下的，<br>不是风景，<br><em>是我经过它的证据。</em></h2>
+            <div class="manifesto-body reveal">
+              <p>我叫张军毅，目前在上海生活与工作。相机对我来说不是一件装备，而是一种让自己慢下来的方式。</p>
+              <p>我关注自然光、人与空间的关系，以及那些没有被精心安排的日常。这里收录我的摄影作品、拍摄手记和一些未完待续的片段。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="manifesto-data reveal">
+          <div><span>Based in</span><strong>Shanghai, CN</strong></div>
+          <div><span>Focus</span><strong>Photography · Writing</strong></div>
+          <div><span>Since</span><strong>2018</strong></div>
+          <div><span>Status</span><strong class="status-live"><i></i>Open for stories</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="works-pin" id="works" aria-labelledby="works-title">
+      <div class="works-sticky">
+        <div class="works-head">
+          <div class="section-index"><span>02</span><span>SELECTED WORKS</span></div>
+          <div class="works-title-wrap">
+            <h2 id="works-title">光经过的地方</h2>
+            <p>拖拽浏览 / 点击查看作品</p>
+          </div>
+          <div class="works-counter"><span id="works-current">01</span><i></i><span>09</span></div>
+        </div>
+
+        <div class="works-viewport">
+          <div class="works-track" id="works-track">
+            <button class="work-card work-card-wide" type="button" data-index="0" data-src="assets/photos/photo-01.jpg" data-title="雾中的山脊" data-meta="四川 · Film · 2025" data-description="清晨六点，雾从谷底缓慢升起。等了四十分钟，山脊只露出不到三十秒。" aria-label="查看作品：雾中的山脊">
+              <span class="work-image"><img src="assets/photos/photo-01.jpg" alt="雾中的山脊" width="1200" height="1600" loading="lazy"></span>
+              <span class="work-info"><span class="work-num">01</span><strong>雾中的山脊</strong><small>Landscape / 2025</small></span>
+            </button>
+
+            <button class="work-card work-card-regular" type="button" data-index="1" data-src="assets/photos/photo-02.jpg" data-title="夜间航线" data-meta="上海 · Digital · 2026" data-description="雨把霓虹揉成一层很薄的雾。绿灯亮起时，所有人都走向各自的生活。" aria-label="查看作品：夜间航线">
+              <span class="work-image"><img src="assets/photos/photo-02.jpg" alt="夜间航线" width="1800" height="1200" loading="lazy"></span>
+              <span class="work-info"><span class="work-num">02</span><strong>夜间航线</strong><small>City / 2026</small></span>
+            </button>
+
+            <button class="work-card work-card-regular" type="button" data-index="2" data-src="assets/photos/photo-03.jpg" data-title="海平线之外" data-meta="青岛 · Film · 2024" data-description="那天风很大，海没有说话。我们坐到潮水漫过鞋边，才决定回去。" aria-label="查看作品：海平线之外">
+              <span class="work-image"><img src="assets/photos/photo-03.jpg" alt="海平线之外" width="1800" height="1200" loading="lazy"></span>
+              <span class="work-info"><span class="work-num">03</span><strong>海平线之外</strong><small>Coast / 2024</small></span>
+            </button>
+
+            <button class="work-card work-card-wide" type="button" data-index="3" data-src="assets/photos/photo-04.jpg" data-title="风经过她" data-meta="杭州 · Digital · 2026" data-description="一束午后光落在墙面上。没有摆姿势，只是让她继续做手里的事。" aria-label="查看作品：风经过她">
+              <span class="work-image"><img src="assets/photos/photo-04.jpg" alt="风经过她" width="1400" height="1800" loading="lazy"></span>
+              <span class="work-info"><span class="work-num">04</span><strong>风经过她</strong><small>Portrait / 2026</small></span>
+            </button>
+
+            <button class="work-card work-card-regular" type="button" data-index="4" data-src="assets/photos/photo-05.jpg" data-title="建筑的回声" data-meta="泉州 · Digital · 2025" data-description="阳光把巷子切成两半。我们走进阴影，又从另一边回到夏天。" aria-label="查看作品：建筑的回声">
+              <span class="work-image"><img src="assets/photos/photo-05.jpg" alt="建筑的回声" width="1800" height="1200" loading="lazy"></span>
+              <span class="work-info"><span class="work-num">05</span><strong>建筑的回声</strong><small>Architecture / 2025</small></span>
+            </button>
+
+            <button class="work-card work-card-regular" type="button" data-index="5" data-src="assets/photos/photo-06.jpg" data-title="移动的窗" data-meta="重庆 · Digital · 2023" data-description="站台渐渐空了。远处的灯像一条被拉长的句子，在黑暗里结束。" aria-label="查看作品：移动的窗">
+              <span class="work-image"><img src="assets/photos/photo-06.jpg" alt="移动的窗" width="1800" height="1200" loading="lazy"></span>
+              <span class="work-info"><span class="work-num">06</span><strong>移动的窗</strong><small>Motion / 2023</small></span>
+            </button>
+
+            <button class="work-card work-card-wide" type="button" data-index="6" data-src="assets/photos/photo-07.jpg" data-title="绿色沉默" data-meta="大理 · Film · 2025" data-description="草叶朝同一个方向倾斜。看不见的风，因此有了自己的形状。" aria-label="查看作品：绿色沉默">
+              <span class="work-image"><img src="assets/photos/photo-07.jpg" alt="绿色沉默" width="1800" height="1200" loading="lazy"></span>
+              <span class="work-info"><span class="work-num">07</span><strong>绿色沉默</strong><small>Nature / 2025</small></span>
+            </button>
+
+            <button class="work-card work-card-regular" type="button" data-index="7" data-src="assets/photos/photo-08.jpg" data-title="暮色校准" data-meta="上海 · Digital · 2026" data-description="天色从橘色退到深蓝，只用了七分钟。城市的灯便接住了整个夜晚。" aria-label="查看作品：暮色校准">
+              <span class="work-image"><img src="assets/photos/photo-08.jpg" alt="暮色校准" width="1800" height="1200" loading="lazy"></span>
+              <span class="work-info"><span class="work-num">08</span><strong>暮色校准</strong><small>Dusk / 2026</small></span>
+            </button>
+
+            <button class="work-card work-card-regular" type="button" data-index="8" data-src="assets/photos/photo-09.jpg" data-title="无人的房间" data-meta="苏州 · Film · 2024" data-description="门开着，屋里没有人。桌上的杯子还留下一点温度，像刚刚有人离开。" aria-label="查看作品：无人的房间">
+              <span class="work-image"><img src="assets/photos/photo-09.jpg" alt="无人的房间" width="1800" height="1200" loading="lazy"></span>
+              <span class="work-info"><span class="work-num">09</span><strong>无人的房间</strong><small>Still life / 2024</small></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="works-progress" aria-hidden="true"><i id="works-progress-bar"></i></div>
+      </div>
+    </section>
+
+    <section class="journal" id="journal" aria-labelledby="journal-title">
+      <div class="section-frame">
+        <div class="journal-head reveal">
+          <div class="section-index"><span>03</span><span>NOTES &amp; STORIES</span></div>
+          <h2 id="journal-title">没有交给相机的<br><em>那些瞬间</em></h2>
+          <p>关于城市、等待、旅行，以及按下快门前后发生的小事。</p>
+        </div>
+
+        <div class="journal-list">
+          <button class="journal-row reveal" type="button" data-post="city-4am" data-preview="assets/photos/photo-02.jpg">
+            <span class="journal-no">01</span>
+            <span class="journal-date">2026.08.14</span>
+            <span class="journal-main"><strong>凌晨四点的城市，比白天更诚实</strong><small>城市观察 / 6 min read</small></span>
+            <span class="journal-arrow">↗</span>
+          </button>
+          <button class="journal-row reveal" type="button" data-post="seaside-wait" data-preview="assets/photos/photo-03.jpg">
+            <span class="journal-no">02</span>
+            <span class="journal-date">2026.06.02</span>
+            <span class="journal-main"><strong>关于等待：在海边坐了三个小时</strong><small>拍摄手记 / 4 min read</small></span>
+            <span class="journal-arrow">↗</span>
+          </button>
+          <button class="journal-row reveal" type="button" data-post="twelve-frames" data-preview="assets/photos/photo-01.jpg">
+            <span class="journal-no">03</span>
+            <span class="journal-date">2026.03.19</span>
+            <span class="journal-main"><strong>一卷胶片只拍了十二张</strong><small>日常片段 / 5 min read</small></span>
+            <span class="journal-arrow">↗</span>
+          </button>
+        </div>
+        <div class="journal-preview" id="journal-preview" aria-hidden="true"><img src="assets/photos/photo-02.jpg" alt=""></div>
+      </div>
+    </section>
+
+    <section class="quote-section" aria-label="创作理念">
+      <div class="quote-orbit" aria-hidden="true"><span>LIGHT</span><i></i><span>MEMORY</span></div>
+      <blockquote class="reveal">
+        <span>“</span>
+        摄影不是答案。<br>它是提醒我继续观察的<em>问题。</em>
+      </blockquote>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="section-frame">
+        <div class="section-index reveal"><span>04</span><span>CONTACT / COLLABORATE</span></div>
+        <div class="contact-head reveal">
+          <p>约拍、展览合作、内容共创，或者只是分享一张你喜欢的照片。</p>
+          <h2 id="contact-title">有光的时候，<br><em>记得叫我。</em></h2>
+        </div>
+
+        <a class="contact-mail" href="mailto:hello@example.com">
+          <span>hello@example.com</span>
+          <i>↗</i>
+        </a>
+
+        <div class="contact-bottom">
+          <button class="copy-button" type="button" data-copy="hello@example.com">Copy email <span>＋</span></button>
+          <div class="social-links">
+            <a href="#contact">Instagram</a>
+            <a href="#contact">小红书</a>
+            <a href="#contact">微信公众号</a>
+          </div>
+          <span>© <span id="year">2026</span> Zhang Junyi</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox-shell">
+      <button class="dialog-close lightbox-close" type="button" aria-label="关闭作品">×</button>
+      <div class="lightbox-media"><img id="lightbox-image" src="assets/photos/photo-01.jpg" alt="" width="1200" height="1600"></div>
+      <div class="lightbox-info">
+        <span class="lightbox-index" id="lightbox-index">01 / 09</span>
+        <h3 id="lightbox-title">雾中的山脊</h3>
+        <p class="lightbox-meta" id="lightbox-meta">四川 · Film · 2025</p>
+        <p class="lightbox-description" id="lightbox-description">清晨六点，雾从谷底缓慢升起。</p>
+        <div class="lightbox-actions">
+          <button type="button" id="lightbox-prev">← Prev</button>
+          <button type="button" id="lightbox-next">Next →</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="post-dialog" id="post-dialog" aria-labelledby="post-title">
+    <article class="post-sheet">
+      <button class="dialog-close post-close" type="button" aria-label="关闭文章">×</button>
+      <div class="post-top">
+        <span id="post-meta">城市观察 · 2026.08.14</span>
+        <span>ZHANG JUNYI / JOURNAL</span>
+      </div>
+      <h2 id="post-title">凌晨四点的城市，比白天更诚实</h2>
+      <div class="post-content" id="post-content"></div>
+      <footer class="post-end"><span>END OF NOTE</span><button type="button" data-close-post>Close note ↑</button></footer>
+    </article>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Email copied</div>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
