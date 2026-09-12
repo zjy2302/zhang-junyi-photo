@@ -2293,3 +2293,143 @@ dialog::backdrop {
 }
 
 
+
+
+/* =========================================================
+   高级主视觉标题：我会找到逆转时间的公式
+   ========================================================= */
+
+.hero-title.hero-title-formula {
+  top: 49%;
+  width: min(calc(100% - var(--gutter) * 2), 92rem);
+  transform: translateY(-50%);
+  font-size: clamp(4rem, 10.2vw, 11rem);
+  line-height: 0.74;
+  letter-spacing: -0.075em;
+  isolation: isolate;
+}
+
+.hero-title-formula::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -12%;
+  z-index: -1;
+  width: min(72vw, 64rem);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(241, 90, 43, 0.16) 0%,
+    rgba(241, 90, 43, 0.05) 38%,
+    transparent 72%
+  );
+  filter: blur(32px);
+}
+
+.hero-title-formula .title-line {
+  position: relative;
+  align-items: flex-end;
+  gap: clamp(0.7rem, 1.8vw, 1.8rem);
+  overflow: hidden;
+}
+
+.hero-title-formula .title-line-first {
+  justify-content: flex-start;
+}
+
+.hero-title-formula .title-line-alt {
+  justify-content: flex-end;
+  margin-top: 0.02em;
+}
+
+.hero-title-formula .title-line-final {
+  justify-content: flex-end;
+  margin-top: 0.08em;
+  padding-right: clamp(0rem, 6vw, 7rem);
+}
+
+.hero-title-formula
+  .title-line:not(.title-line-alt)
+  .title-inner {
+  color: transparent;
+  background: linear-gradient(
+    108deg,
+    #f7f1e7 0%,
+    #ffffff 20%,
+    #a89b8a 48%,
+    #f2e7d8 68%,
+    #ffffff 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: drop-shadow(0 18px 42px rgba(0, 0, 0, 0.38));
+}
+
+.hero-title-formula .title-line-alt .title-inner {
+  color: transparent;
+  background: none;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title-formula .title-line-final .title-inner {
+  font-style: italic;
+  background: linear-gradient(
+    105deg,
+    #ffffff 0%,
+    #f7d8c8 32%,
+    var(--accent) 58%,
+    #fff0e8 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.hero-title-formula .title-line small,
+.hero-title-formula .title-line em {
+  margin-bottom: 0.85em;
+  color: rgba(242, 238, 231, 0.52);
+  font-size: clamp(0.48rem, 0.65vw, 0.65rem);
+  letter-spacing: 0.32em;
+  white-space: nowrap;
+}
+
+body.is-ready
+  .hero-title-formula
+  .title-line:nth-child(3)
+  .title-inner {
+  transition-delay: 0.24s;
+}
+
+@media (max-width: 900px) {
+  .hero-title.hero-title-formula {
+    font-size: clamp(3.4rem, 12.5vw, 7.5rem);
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-title.hero-title-formula {
+    top: 44%;
+    width: calc(100% - var(--gutter) * 2);
+    font-size: clamp(2.7rem, 15.5vw, 5.2rem);
+    line-height: 0.82;
+    letter-spacing: -0.055em;
+  }
+
+  .hero-title-formula .title-line {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 0;
+  }
+
+  .hero-title-formula .title-line small,
+  .hero-title-formula .title-line em {
+    display: none;
+  }
+
+  .hero-title-formula .title-line-final {
+    padding-right: 0;
+  }
+}
