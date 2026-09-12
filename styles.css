@@ -2464,3 +2464,23 @@ body.is-ready
     padding-right: 0.24em !important;
   }
 }
+/* 三行标题水平阶梯排列 */
+.hero-title-formula .title-line-first {
+  justify-content: flex-start;
+}
+
+.hero-title-formula .title-line-alt {
+  justify-content: center;
+}
+
+.hero-title-formula .title-line-final {
+  margin-right: -0.35em !important;
+  padding-right: 0.35em !important;
+}
+
+@media (max-width: 620px) {
+  .hero-title-formula .title-line-final {
+    margin-right: -0.24em !important;
+    padding-right: 0.24em !important;
+  }
+}
