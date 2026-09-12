@@ -2448,3 +2448,19 @@ body.is-ready
     line-height: 1 !important;
   }
 }
+/* 修复“公式”右上角笔画被裁切 */
+.hero-title-formula .title-line-final {
+  padding-right: 0.35em !important;
+}
+
+.hero-title-formula .title-line-final .title-inner {
+  padding-right: 0.12em;
+  margin-right: -0.06em;
+  font-style: normal;
+}
+
+@media (max-width: 620px) {
+  .hero-title-formula .title-line-final {
+    padding-right: 0.24em !important;
+  }
+}
