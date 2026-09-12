@@ -2433,3 +2433,18 @@ body.is-ready
     padding-right: 0;
   }
 }
+/* 修复主标题上下被切割 */
+.hero-title.hero-title-formula {
+  line-height: 1 !important;
+}
+
+.hero-title-formula .title-line {
+  padding-block: 0.1em !important;
+  margin-block: -0.055em !important;
+}
+
+@media (max-width: 620px) {
+  .hero-title.hero-title-formula {
+    line-height: 1 !important;
+  }
+}
