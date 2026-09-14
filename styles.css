@@ -2623,3 +2623,222 @@ body.is-ready
     padding: 0.85rem;
   }
 }
+
+
+/* 首页：查看全部照片卡片 */
+.archive-more {
+  display: flex;
+  min-height: 16rem;
+  break-inside: avoid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 0 0 clamp(0.55rem, 1vw, 1rem);
+  border: 1px solid var(--line-strong);
+  background:
+    radial-gradient(circle at 50% 18%, rgba(241, 90, 43, 0.12), transparent 48%),
+    var(--surface);
+  color: var(--text);
+  transition:
+    border-color 0.35s var(--ease-out),
+    transform 0.35s var(--ease-out),
+    background-color 0.35s var(--ease-out);
+}
+
+.archive-more:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.archive-more-mark {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 0.5;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.archive-more-label {
+  color: var(--muted);
+  font-size: 0.54rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* 全部照片独立页面 */
+.archive-page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.archive-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.25rem var(--gutter);
+  border-bottom: 1px solid var(--line);
+}
+
+.archive-page-header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.archive-page-header .brand-mark {
+  display: grid;
+  width: 2.4rem;
+  height: 2.4rem;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+}
+
+.archive-page-header .brand-name {
+  display: grid;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.archive-page-header .brand-name small {
+  color: var(--muted);
+  font-size: 0.48rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.archive-back {
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: color 0.3s var(--ease-out);
+}
+
+.archive-back:hover {
+  color: var(--accent);
+}
+
+.full-archive {
+  padding: clamp(4rem, 9vw, 9rem) var(--gutter) clamp(5rem, 9vw, 9rem);
+}
+
+.full-archive-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(17rem, 0.65fr);
+  align-items: end;
+  gap: clamp(2rem, 7vw, 8rem);
+}
+
+.full-archive-head h1 {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 12rem);
+  font-weight: 400;
+  letter-spacing: -0.085em;
+  line-height: 0.82;
+}
+
+.full-archive-intro {
+  max-width: 27rem;
+  margin-left: auto;
+  padding-left: 1.4rem;
+  border-left: 1px solid var(--line-strong);
+  color: var(--muted);
+  font-size: clamp(0.86rem, 1.05vw, 0.98rem);
+  line-height: 1.9;
+}
+
+.full-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.65rem, 1.2vw, 1.2rem);
+  margin-top: clamp(3rem, 6vw, 6rem);
+}
+
+.full-archive-card {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.full-archive-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: grayscale(0.5) saturate(0.76) contrast(1.05);
+  transition:
+    transform 1.05s var(--ease-out),
+    filter 0.75s var(--ease-out);
+}
+
+.full-archive-card:hover img {
+  filter: grayscale(0) saturate(0.96) contrast(1.03);
+  transform: scale(1.035);
+}
+
+.full-archive-card figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  color: #f2eee7;
+  background: linear-gradient(to top, rgba(5, 6, 6, 0.78), transparent 76%);
+}
+
+.full-archive-card strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.8vw, 1.55rem);
+  font-weight: 400;
+}
+
+.full-archive-card small {
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .full-archive-head {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .full-archive-intro {
+    max-width: 32rem;
+    margin-left: 0;
+  }
+
+  .full-archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .archive-page-header .brand-name small {
+    display: none;
+  }
+
+  .full-archive-head h1 {
+    font-size: clamp(3.4rem, 17vw, 5.8rem);
+  }
+
+  .full-archive-grid {
+    grid-template-columns: 1fr;
+  }
+}
