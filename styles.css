@@ -688,7 +688,7 @@ body.is-ready .hero-reveal {
   align-items: center;
   gap: 0.8rem;
   color: var(--muted);
-  font-size: 0.55rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -697,13 +697,13 @@ body.is-ready .hero-reveal {
 .section-index span:first-child {
   display: grid;
   place-items: center;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border: 1px solid var(--line-strong);
   border-radius: 50%;
   color: var(--text);
   font-family: var(--font-display);
-  font-size: 0.72rem;
+  font-size: 0.92rem;
 }
 
 .manifesto {
