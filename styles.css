@@ -1342,7 +1342,7 @@ body.is-ready .hero-reveal {
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--line-strong);
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 5vw, 5.6rem);
+  font-size: clamp(1.3rem, 3.5vw, 3.6rem);
   letter-spacing: -0.05em;
   transition: color 0.3s ease, border-color 0.3s ease;
 }
@@ -2197,7 +2197,7 @@ dialog::backdrop {
 
   .contact-mail {
     align-items: flex-end;
-    font-size: clamp(1.35rem, 7vw, 2.1rem);
+    font-size: clamp(1rem, 5vw, 1.5rem);
   }
 
   .contact-bottom {
