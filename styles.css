@@ -2484,3 +2484,142 @@ body.is-ready
     padding-right: 0.24em !important;
   }
 }
+
+/* =========================================================
+   照片归档
+   ========================================================= */
+
+.archive-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(17rem, 0.65fr);
+  align-items: end;
+  gap: clamp(2rem, 7vw, 8rem);
+  margin-top: clamp(3rem, 7vw, 7rem);
+}
+
+.archive-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 9vw, 10rem);
+  font-weight: 400;
+  letter-spacing: -0.08em;
+  line-height: 0.82;
+}
+
+.archive-intro {
+  max-width: 27rem;
+  margin-left: auto;
+  padding-left: 1.4rem;
+  border-left: 1px solid var(--line-strong);
+  color: var(--muted);
+  font-size: clamp(0.86rem, 1.05vw, 0.98rem);
+  line-height: 1.9;
+}
+
+.archive-grid {
+  columns: 3;
+  column-gap: clamp(0.55rem, 1vw, 1rem);
+  margin-top: clamp(3rem, 6vw, 6rem);
+}
+
+.archive-item {
+  position: relative;
+  display: block;
+  break-inside: avoid;
+  margin: 0 0 clamp(0.55rem, 1vw, 1rem);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.archive-image {
+  display: block;
+  overflow: hidden;
+}
+
+.archive-image img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(0.55) saturate(0.72) contrast(1.05);
+  transition:
+    transform 1.05s var(--ease-out),
+    filter 0.75s var(--ease-out);
+}
+
+.archive-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(5, 6, 6, 0.78) 0%,
+    rgba(5, 6, 6, 0.12) 42%,
+    transparent 68%
+  );
+}
+
+.archive-item:hover .archive-image img {
+  filter: grayscale(0) saturate(0.96) contrast(1.03);
+  transform: scale(1.035);
+}
+
+.archive-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  color: #f2eee7;
+}
+
+.archive-caption strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.8rem);
+  font-weight: 400;
+}
+
+.archive-caption small {
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.manifesto-data {
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+@media (max-width: 900px) {
+  .archive-head {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .archive-intro {
+    max-width: 32rem;
+    margin-left: 0;
+  }
+
+  .archive-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 620px) {
+  .archive-head h2 {
+    font-size: clamp(3.4rem, 16vw, 5.6rem);
+  }
+
+  .archive-grid {
+    columns: 1;
+  }
+
+  .archive-caption {
+    padding: 0.85rem;
+  }
+}
