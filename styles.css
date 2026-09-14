@@ -3031,3 +3031,40 @@ body.is-ready
     bottom: 1rem;
   }
 }
+
+
+/* 联系区标题：两行均匀分布，整体缩小 */
+.contact-head h2 {
+  display: grid;
+  gap: 0.1em;
+  font-size: clamp(3.2rem, 6.6vw, 7.4rem);
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+}
+
+.contact-head h2 > span,
+.contact-head h2 > em {
+  display: block;
+}
+
+.contact-head h2 > span {
+  justify-self: start;
+}
+
+.contact-head h2 > em {
+  justify-self: end;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .contact-head h2 {
+    font-size: clamp(2.9rem, 8vw, 5.6rem);
+  }
+}
+
+@media (max-width: 620px) {
+  .contact-head h2 {
+    font-size: clamp(2.5rem, 12.5vw, 4.5rem);
+    letter-spacing: -0.055em;
+  }
+}
