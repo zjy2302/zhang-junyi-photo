@@ -2842,3 +2842,192 @@ body.is-ready
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =========================================================
+   V3：高级“查看全部”卡片 + 横竖图自适应 + 返回按钮
+   ========================================================= */
+
+.archive-more {
+  position: relative;
+  display: flex;
+  min-height: 18rem;
+  break-inside: avoid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  margin: 0 0 clamp(0.55rem, 1vw, 1rem);
+  overflow: hidden;
+  border: 1px solid rgba(241, 90, 43, 0.42);
+  background:
+    linear-gradient(145deg, rgba(241, 90, 43, 0.12), transparent 44%),
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.06), transparent 46%),
+    #111312;
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.025);
+  transition:
+    transform 0.5s var(--ease-out),
+    border-color 0.5s var(--ease-out),
+    box-shadow 0.5s var(--ease-out);
+}
+
+.archive-more:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.34),
+    inset 0 0 36px rgba(241, 90, 43, 0.06);
+}
+
+.archive-more-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(241, 90, 43, 0.25);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: archive-more-orbit 12s linear infinite;
+}
+
+.archive-more-ring::after {
+  content: "";
+  position: absolute;
+  top: -0.2rem;
+  left: 50%;
+  width: 0.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 18px rgba(241, 90, 43, 0.85);
+}
+
+.archive-more-mark {
+  position: relative;
+  z-index: 1;
+  color: #fff8f3;
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 7vw, 5.4rem);
+  line-height: 0.42;
+  letter-spacing: 0.12em;
+  text-shadow: 0 12px 36px rgba(0, 0, 0, 0.42);
+}
+
+.archive-more-count {
+  position: relative;
+  z-index: 1;
+  color: var(--accent-soft);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.archive-more-label {
+  position: relative;
+  z-index: 1;
+  color: rgba(242, 238, 231, 0.78);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.archive-more-arrow {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.8rem;
+  color: var(--accent);
+  font-size: 1.2rem;
+  transition: transform 0.45s var(--ease-out);
+}
+
+.archive-more:hover .archive-more-arrow {
+  transform: translate(0.18rem, -0.18rem);
+}
+
+@keyframes archive-more-orbit {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* 全部照片：使用瀑布流保留横竖图原始比例 */
+.full-archive-grid {
+  display: block;
+  columns: 3;
+  column-gap: clamp(0.65rem, 1.2vw, 1.2rem);
+}
+
+.full-archive-card {
+  break-inside: avoid;
+  margin: 0 0 clamp(0.65rem, 1.2vw, 1.2rem);
+}
+
+.full-archive-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+/* 返回刚才页面 */
+.archive-return {
+  position: fixed;
+  right: var(--gutter);
+  bottom: 1.4rem;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.82rem 1.05rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgba(13, 14, 14, 0.78);
+  color: var(--text);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+  transition:
+    transform 0.35s var(--ease-out),
+    border-color 0.35s var(--ease-out),
+    color 0.35s var(--ease-out);
+}
+
+.archive-return:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  color: var(--accent-soft);
+}
+
+.full-archive {
+  padding-bottom: clamp(8rem, 13vw, 13rem);
+}
+
+@media (max-width: 900px) {
+  .full-archive-grid {
+    display: block;
+    columns: 2;
+  }
+}
+
+@media (max-width: 620px) {
+  .archive-more {
+    min-height: 15rem;
+  }
+
+  .archive-more-ring {
+    width: 8rem;
+  }
+
+  .full-archive-grid {
+    display: block;
+    columns: 1;
+  }
+
+  .archive-return {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
